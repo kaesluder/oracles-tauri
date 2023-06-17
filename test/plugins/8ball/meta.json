@@ -1,0 +1,8 @@
+{
+  "title": "The Magic 8-Ball Simulator",
+  "description": "A Magic 8-Ball, ask it a yes/no question.",
+  "original-from": "Mattel (via Wikipedia)",
+  "original-url": "https://en.wikipedia.org/wiki/Magic_8_Ball",
+  "include": ["table-8ball-en"],
+  "category": "toys"
+}

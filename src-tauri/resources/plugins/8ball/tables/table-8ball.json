@@ -1,0 +1,26 @@
+{
+  "key": "table-8ball-en",
+  "description": "Magic 8-Ball table",
+  "items": [
+    { "blurb": "It is certain." },
+    { "blurb": "It is decidedly so." },
+    { "blurb": "Without a doubt." },
+    { "blurb": "Yes definitely." },
+    { "blurb": "You may rely on it." },
+    { "blurb": "As I see it, yes." },
+    { "blurb": "Most likely." },
+    { "blurb": "Outlook good." },
+    { "blurb": "Yes." },
+    { "blurb": "Signs point to yes." },
+    { "blurb": "Reply hazy, try again." },
+    { "blurb": "Ask again later." },
+    { "blurb": "Better not tell you now." },
+    { "blurb": "Cannot predict now." },
+    { "blurb": "Concentrate and ask again." },
+    { "blurb": "Don't count on it." },
+    { "blurb": "My reply is no." },
+    { "blurb": "My sources say no." },
+    { "blurb": "Outlook not so good." },
+    { "blurb": "Very doubtful." }
+  ]
+}
