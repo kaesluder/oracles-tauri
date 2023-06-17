@@ -26,3 +26,17 @@ export const loadPluginMeta = async function (dirEntry: FileEntry) {
 export const loadAllPluginMeta = async function (plugins: FileEntry[]) {
   return await Promise.all(plugins.map(loadPluginMeta));
 };
+
+export const fullPluginData = async function (dirEntry: FileEntry) {
+  const pluginData = await loadPluginMeta(dirEntry);
+  const tableList = await readDir(dirEntry.path + '/tables');
+  let tableDataRaw = await Promise.all(
+    tableList.map(async (x) => {
+      return parseFile(x.path);
+    })
+  );
+  pluginData['tables'] = Object.fromEntries(
+    tableDataRaw.map((x) => [x.key, x])
+  );
+  return pluginData;
+};

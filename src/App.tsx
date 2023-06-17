@@ -4,7 +4,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 import { BaseDirectory, readDir } from '@tauri-apps/api/fs';
 import { resourceDir } from '@tauri-apps/api/path';
-import { listPlugins, loadPluginMeta, loadAllPluginMeta } from "./helpers/Plugin";
+import { listPlugins, loadPluginMeta, loadAllPluginMeta, fullPluginData } from "./helpers/Plugin";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -24,11 +24,13 @@ function App() {
 
   const listAllPlugins = async function () { 
     const plugins = await listPlugins('resources/plugins', BaseDirectory.Resource)
-    setTest(plugins[0].name || "")
-    const testMeta = await(loadAllPluginMeta(plugins))
-    console.log(plugins)
-    console.log(testMeta)
-    console.log(testMeta[0].title)
+    setTest(plugins[0].name || "");
+    const testMeta = await(loadAllPluginMeta(plugins));
+    console.log(plugins);
+    console.log(testMeta);
+    console.log(testMeta[0].title);
+    const eightBallData = await fullPluginData(plugins[0]);
+    console.log(eightBallData);
 
   }
 
